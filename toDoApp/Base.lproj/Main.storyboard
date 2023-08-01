@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dad-Et-gWJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TO DO-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="Anasayfa" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt9-kF-K7E">
+                                <rect key="frame" x="146" y="405" width="101" height="42"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DETAY">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPo-Mw-zHP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wt9-kF-K7E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Cu-fH-hGg"/>
+                            <constraint firstItem="Wt9-kF-K7E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xFr-iy-ye3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TO DO" id="x5H-ce-g9z">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1wf-Rd-trJ">
+                            <connections>
+                                <segue destination="L8j-BN-o4E" kind="show" id="W1x-CX-gJx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="Ejj-xz-dpD" kind="show" identifier="toDetay" id="LA6-eA-Keo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.38931297709917" y="-34.507042253521128"/>
+        </scene>
+        <!--TO DO KAYIT-->
+        <scene sceneID="Wpx-on-TP2">
+            <objects>
+                <viewController id="L8j-BN-o4E" customClass="ToDoEkle" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qgB-wG-lTU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TO DO " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-Dh-vEK">
+                                <rect key="frame" x="30" y="230" width="333" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1P-Ua-qmS">
+                                <rect key="frame" x="80" y="374.66666666666669" width="233" height="41.666666666666686"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="KAYDET">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonKaydet:" destination="L8j-BN-o4E" eventType="touchUpInside" id="efj-vN-yGC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LzF-0E-6Kr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="i1P-Ua-qmS" firstAttribute="top" secondItem="fEf-Dh-vEK" secondAttribute="bottom" constant="99" id="4zc-Ch-pB4"/>
+                            <constraint firstItem="fEf-Dh-vEK" firstAttribute="leading" secondItem="LzF-0E-6Kr" secondAttribute="leading" constant="30" id="fo5-Nv-L0t"/>
+                            <constraint firstItem="i1P-Ua-qmS" firstAttribute="leading" secondItem="LzF-0E-6Kr" secondAttribute="leading" constant="80" id="luL-gl-m06"/>
+                            <constraint firstItem="i1P-Ua-qmS" firstAttribute="centerX" secondItem="qgB-wG-lTU" secondAttribute="centerX" id="n8t-0p-OlE"/>
+                            <constraint firstItem="fEf-Dh-vEK" firstAttribute="top" secondItem="LzF-0E-6Kr" secondAttribute="top" constant="75" id="plC-cI-Pb3"/>
+                            <constraint firstItem="LzF-0E-6Kr" firstAttribute="trailing" secondItem="i1P-Ua-qmS" secondAttribute="trailing" constant="80" id="qdH-zA-7kA"/>
+                            <constraint firstItem="LzF-0E-6Kr" firstAttribute="trailing" secondItem="fEf-Dh-vEK" secondAttribute="trailing" constant="30" id="xy9-pw-6kC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TO DO KAYIT" id="sag-Z1-gMR"/>
+                    <connections>
+                        <outlet property="tftodoAd" destination="fEf-Dh-vEK" id="7Zs-DC-vKs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2l-5s-cA1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="-380"/>
+        </scene>
+        <!--TO DO DETAY-->
+        <scene sceneID="xS2-vq-5ue">
+            <objects>
+                <viewController id="Ejj-xz-dpD" customClass="ToDoDetay" customModule="toDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l5z-Nb-Uth">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="TO DO" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v4I-je-Uaz">
+                                <rect key="frame" x="30" y="244.99999999999997" width="333" height="45.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urH-xQ-k99">
+                                <rect key="frame" x="80" y="389.66666666666669" width="233" height="41.666666666666686"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GÜNCELLE">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGuncelle:" destination="Ejj-xz-dpD" eventType="touchUpInside" id="1mM-eK-qlc"/>
+                                    <action selector="buttonKaydet:" destination="L8j-BN-o4E" eventType="touchUpInside" id="sEo-D6-JZj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="voI-LH-XyQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v4I-je-Uaz" firstAttribute="leading" secondItem="voI-LH-XyQ" secondAttribute="leading" constant="30" id="1DI-eu-qeK"/>
+                            <constraint firstItem="voI-LH-XyQ" firstAttribute="trailing" secondItem="urH-xQ-k99" secondAttribute="trailing" constant="80" id="CRx-Ld-Aq0"/>
+                            <constraint firstItem="voI-LH-XyQ" firstAttribute="trailing" secondItem="v4I-je-Uaz" secondAttribute="trailing" constant="30" id="MFe-Ac-oOH"/>
+                            <constraint firstItem="urH-xQ-k99" firstAttribute="top" secondItem="v4I-je-Uaz" secondAttribute="bottom" constant="99" id="O9D-Jb-LNb"/>
+                            <constraint firstItem="urH-xQ-k99" firstAttribute="top" secondItem="v4I-je-Uaz" secondAttribute="bottom" constant="99" id="TjU-KF-Aun"/>
+                            <constraint firstItem="urH-xQ-k99" firstAttribute="leading" secondItem="voI-LH-XyQ" secondAttribute="leading" constant="80" id="UU5-ux-iHR"/>
+                            <constraint firstItem="v4I-je-Uaz" firstAttribute="top" secondItem="voI-LH-XyQ" secondAttribute="top" constant="90" id="det-sj-Tp7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="TO DO DETAY" id="sBe-2A-IHy"/>
+                    <connections>
+                        <outlet property="tftoDoAd" destination="v4I-je-Uaz" id="jKu-10-qcu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="weU-R6-qog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="325"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S4u-Dm-okG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dad-Et-gWJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="asK-c4-43I">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a9u-AA-Qoj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5Q-Oc-85P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
