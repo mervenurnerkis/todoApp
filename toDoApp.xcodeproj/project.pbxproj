@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD56EFB22A7CDAB0006AC47F /* ToDoHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56EFB12A7CDAB0006AC47F /* ToDoHucre.swift */; };
 		FDECD6952A78E60F00546383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECD6942A78E60F00546383 /* AppDelegate.swift */; };
 		FDECD6972A78E60F00546383 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECD6962A78E60F00546383 /* SceneDelegate.swift */; };
 		FDECD6992A78E60F00546383 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECD6982A78E60F00546383 /* Anasayfa.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD56EFB12A7CDAB0006AC47F /* ToDoHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHucre.swift; sourceTree = "<group>"; };
 		FDECD6912A78E60F00546383 /* toDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDECD6942A78E60F00546383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDECD6962A78E60F00546383 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD56EFB02A7CDA8F006AC47F /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				FD56EFB12A7CDAB0006AC47F /* ToDoHucre.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
 		FDECD6882A78E60F00546383 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		FDECD6A82A78E67500546383 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FD56EFB02A7CDA8F006AC47F /* tableview */,
 				FDECD6A92A78E68100546383 /* views */,
 			);
 			path = ui;
@@ -185,6 +196,7 @@
 				FDECD6AF2A78E71300546383 /* ToDoDetay.swift in Sources */,
 				FDECD6972A78E60F00546383 /* SceneDelegate.swift in Sources */,
 				FDECD6B12A78E74500546383 /* toDos.swift in Sources */,
+				FD56EFB22A7CDAB0006AC47F /* ToDoHucre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

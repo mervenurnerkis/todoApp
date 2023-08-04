@@ -16,22 +16,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wt9-kF-K7E">
-                                <rect key="frame" x="146" y="405" width="101" height="42"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="DETAY">
-                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
-                                </buttonConfiguration>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="B6Y-UY-CK7">
+                                <rect key="frame" x="0.0" y="155" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="buttonDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OPo-Mw-zHP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="mVE-KV-Cmw"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xmu-Ni-XCJ">
+                                <rect key="frame" x="0.0" y="211" width="393" height="607"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="todoHucre" id="JFU-DW-bPF" customClass="ToDoHucre" customModule="toDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JFU-DW-bPF" id="B3N-5a-5oc">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="5T5-Vc-frm">
+                                                    <rect key="frame" x="60.999999999999986" y="19.666666666666671" width="217.66666666666663" height="36"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Evi Temizlemek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5b-M8-M2A">
+                                                            <rect key="frame" x="0.0" y="0.0" width="217.66666666666666" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="ohE-D1-Pw8">
+                                                    <rect key="frame" x="20" y="7" width="30" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Veb-Lq-Din"/>
+                                                        <constraint firstAttribute="width" constant="30" id="rVq-vX-SaD"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="ohE-D1-Pw8" firstAttribute="leading" secondItem="B3N-5a-5oc" secondAttribute="leading" constant="10" id="3TN-M9-dab"/>
+                                                <constraint firstItem="5T5-Vc-frm" firstAttribute="leading" secondItem="ohE-D1-Pw8" secondAttribute="trailing" constant="20.999999999999986" id="C8q-CZ-tyc"/>
+                                                <constraint firstItem="5T5-Vc-frm" firstAttribute="centerY" secondItem="B3N-5a-5oc" secondAttribute="centerY" id="WkK-Ni-sWw"/>
+                                                <constraint firstAttribute="bottom" secondItem="ohE-D1-Pw8" secondAttribute="bottom" id="Z2a-6d-bse"/>
+                                                <constraint firstItem="ohE-D1-Pw8" firstAttribute="centerY" secondItem="5T5-Vc-frm" secondAttribute="centerY" id="y0b-aJ-tt8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelTodo" destination="F5b-M8-M2A" id="JiL-97-k7Q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="Wt9-kF-K7E" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Cu-fH-hGg"/>
-                            <constraint firstItem="Wt9-kF-K7E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xFr-iy-ye3"/>
+                            <constraint firstItem="xmu-Ni-XCJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="82Q-ew-zec"/>
+                            <constraint firstItem="B6Y-UY-CK7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DcK-1a-9y6"/>
+                            <constraint firstItem="B6Y-UY-CK7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YYm-c0-4A4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xmu-Ni-XCJ" secondAttribute="bottom" id="ZpR-3R-MOJ"/>
+                            <constraint firstItem="xmu-Ni-XCJ" firstAttribute="top" secondItem="B6Y-UY-CK7" secondAttribute="bottom" id="c04-kC-Y53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xmu-Ni-XCJ" secondAttribute="trailing" id="kCO-Ij-lMX"/>
+                            <constraint firstItem="B6Y-UY-CK7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tc9-vG-hlx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TO DO" id="x5H-ce-g9z">
@@ -42,6 +89,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="B6Y-UY-CK7" id="KHw-7A-3kD"/>
+                        <outlet property="toDoTableView" destination="xmu-Ni-XCJ" id="AjJ-aW-phW"/>
                         <segue destination="Ejj-xz-dpD" kind="show" identifier="toDetay" id="LA6-eA-Keo"/>
                     </connections>
                 </viewController>
@@ -160,8 +209,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
