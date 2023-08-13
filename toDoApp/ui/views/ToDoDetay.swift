@@ -13,6 +13,8 @@ class ToDoDetay: UIViewController {
     
     var toDo: toDos?
     
+    var viewModel = TodoDetayViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,12 +25,9 @@ class ToDoDetay: UIViewController {
     
     @IBAction func buttonGuncelle(_ sender: Any) {
         if let ta = tftoDoAd.text, let t = toDo {
-            guncelle(toDo_id: t.toDo_id!, toDo_ad: ta)
+            viewModel.guncelle(toDo_id: t.toDo_id!, toDo_ad: ta)
         }
     }
     
-    func guncelle(toDo_id:Int, toDo_ad:String) {
-        print("to Do güncelle: \(toDo_id), \(toDo_ad)")
-    }
 
 }

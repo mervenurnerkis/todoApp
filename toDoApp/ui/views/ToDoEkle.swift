@@ -10,6 +10,9 @@ import UIKit
 class ToDoEkle: UIViewController {
 
     @IBOutlet weak var tftodoAd: UITextField!
+    
+    var viewModel = ToDoKayitViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,12 +21,9 @@ class ToDoEkle: UIViewController {
 
     @IBAction func buttonKaydet(_ sender: Any) {
         if let ta = tftodoAd.text {
-            kaydet(toDo_ad: ta)
+            viewModel.kaydet(toDo_ad: ta)
         }
     }
     
-    func kaydet(toDo_ad:String) {
-        print("To do kaydet: \(toDo_ad)")
-    }
     
 }

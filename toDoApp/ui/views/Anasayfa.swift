@@ -14,6 +14,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var toDoTableView: UITableView!
     
     var toDoListe = [toDos]()
+    var viewModel = AnasayfaViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,15 @@ class Anasayfa: UIViewController {
         toDoTableView.delegate = self
         toDoTableView.dataSource = self
         
-        let t1 = toDos(toDo_id: 1, toDo_ad: "Evi Temizlemek")
-        let t2 = toDos(toDo_id: 2, toDo_ad: "Çiçekleri Sulamak")
-        let t3 = toDos(toDo_id: 3, toDo_ad: "Kargoya Gitmek")
-        
-        toDoListe.append(t1)
-        toDoListe.append(t2)
-        toDoListe.append(t3)
+        _ = viewModel.todosListe.subscribe(onNext: { liste in
+            self.toDoListe = liste
+            self.toDoTableView.reloadData()
+        })
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.toDoYukle()
+    }
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -45,7 +46,7 @@ class Anasayfa: UIViewController {
 
 extension Anasayfa: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("To Do Ara: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -83,7 +84,8 @@ extension Anasayfa: UITableViewDelegate,UITableViewDataSource {
             alert.addAction(iptalAction)
             
             let evetAction = UIAlertAction(title: "Evet", style: .destructive) { action in
-                print("To Do Sil: \(toDo.toDo_id!)")
+                self.viewModel.sil(toDo_id: toDo.toDo_id!)
+                
             }
             alert.addAction(evetAction)
             

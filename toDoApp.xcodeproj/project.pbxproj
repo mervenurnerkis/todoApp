@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2BCA9E2A88F78700009CEB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD2BCA9D2A88F78700009CEB /* RxSwift */; };
+		FD2BCAA12A88F85700009CEB /* TodoDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2BCAA02A88F85700009CEB /* TodoDaoRepository.swift */; };
+		FD2BCAA42A88FA2E00009CEB /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2BCAA32A88FA2E00009CEB /* AnasayfaViewModel.swift */; };
+		FD2BCAA62A88FA9100009CEB /* TodoKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2BCAA52A88FA9100009CEB /* TodoKayitViewModel.swift */; };
+		FD2BCAA82A88FAE600009CEB /* TodoDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2BCAA72A88FAE600009CEB /* TodoDetayViewModel.swift */; };
 		FD56EFB22A7CDAB0006AC47F /* ToDoHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD56EFB12A7CDAB0006AC47F /* ToDoHucre.swift */; };
 		FDECD6952A78E60F00546383 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECD6942A78E60F00546383 /* AppDelegate.swift */; };
 		FDECD6972A78E60F00546383 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDECD6962A78E60F00546383 /* SceneDelegate.swift */; };
@@ -20,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD2BCAA02A88F85700009CEB /* TodoDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDaoRepository.swift; sourceTree = "<group>"; };
+		FD2BCAA32A88FA2E00009CEB /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		FD2BCAA52A88FA9100009CEB /* TodoKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoKayitViewModel.swift; sourceTree = "<group>"; };
+		FD2BCAA72A88FAE600009CEB /* TodoDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetayViewModel.swift; sourceTree = "<group>"; };
 		FD56EFB12A7CDAB0006AC47F /* ToDoHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoHucre.swift; sourceTree = "<group>"; };
 		FDECD6912A78E60F00546383 /* toDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDECD6942A78E60F00546383 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2BCA9E2A88F78700009CEB /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD2BCA9F2A88F83800009CEB /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				FD2BCAA02A88F85700009CEB /* TodoDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		FD2BCAA22A88F8D800009CEB /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FD2BCAA32A88FA2E00009CEB /* AnasayfaViewModel.swift */,
+				FD2BCAA52A88FA9100009CEB /* TodoKayitViewModel.swift */,
+				FD2BCAA72A88FAE600009CEB /* TodoDetayViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		FD56EFB02A7CDA8F006AC47F /* tableview */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,7 @@
 		FDECD6A82A78E67500546383 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FD2BCAA22A88F8D800009CEB /* viewmodel */,
 				FD56EFB02A7CDA8F006AC47F /* tableview */,
 				FDECD6A92A78E68100546383 /* views */,
 			);
@@ -106,6 +135,7 @@
 		FDECD6AA2A78E68D00546383 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				FD2BCA9F2A88F83800009CEB /* repo */,
 				FDECD6AB2A78E69300546383 /* entity */,
 			);
 			path = data;
@@ -135,6 +165,9 @@
 			dependencies = (
 			);
 			name = toDoApp;
+			packageProductDependencies = (
+				FD2BCA9D2A88F78700009CEB /* RxSwift */,
+			);
 			productName = toDoApp;
 			productReference = FDECD6912A78E60F00546383 /* toDoApp.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +196,9 @@
 				Base,
 			);
 			mainGroup = FDECD6882A78E60F00546383;
+			packageReferences = (
+				FD2BCA9C2A88F78700009CEB /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = FDECD6922A78E60F00546383 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -193,7 +229,11 @@
 				FDECD6AD2A78E6F100546383 /* ToDoEkle.swift in Sources */,
 				FDECD6992A78E60F00546383 /* Anasayfa.swift in Sources */,
 				FDECD6952A78E60F00546383 /* AppDelegate.swift in Sources */,
+				FD2BCAA82A88FAE600009CEB /* TodoDetayViewModel.swift in Sources */,
 				FDECD6AF2A78E71300546383 /* ToDoDetay.swift in Sources */,
+				FD2BCAA12A88F85700009CEB /* TodoDaoRepository.swift in Sources */,
+				FD2BCAA62A88FA9100009CEB /* TodoKayitViewModel.swift in Sources */,
+				FD2BCAA42A88FA2E00009CEB /* AnasayfaViewModel.swift in Sources */,
 				FDECD6972A78E60F00546383 /* SceneDelegate.swift in Sources */,
 				FDECD6B12A78E74500546383 /* toDos.swift in Sources */,
 				FD56EFB22A7CDAB0006AC47F /* ToDoHucre.swift in Sources */,
@@ -414,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FD2BCA9C2A88F78700009CEB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FD2BCA9D2A88F78700009CEB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FD2BCA9C2A88F78700009CEB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FDECD6892A78E60F00546383 /* Project object */;
 }
