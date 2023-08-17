@@ -28,4 +28,24 @@ class AnasayfaViewModel {
     func toDoYukle() {
         krepo.toDoYukle()
     }
+    
+    func veritabaniKopyala(){
+        let bundleYolu = Bundle.main.path(forResource: "toDos", ofType: ".sqlite")
+        
+        let dosyaYolu = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        let veritabaniURL = URL(fileURLWithPath: dosyaYolu).appendingPathComponent("toDos.sqlite")
+        
+        let fm = FileManager.default
+        
+        if fm.fileExists(atPath: veritabaniURL.path()){
+            print("Veritabanı zaten var.")
+        }else{
+            do{
+                try fm.copyItem(atPath: bundleYolu!, toPath: veritabaniURL.path)
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
+        
+    }
 }
